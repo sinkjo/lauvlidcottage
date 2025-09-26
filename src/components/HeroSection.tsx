@@ -25,15 +25,30 @@ export default function HeroSection() {
   
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background image with parallax */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1615571022219-eb45cf7faa9d?q=80&w=1920&auto=format&fit=crop')",
-          transform: `translateY(${backgroundY}px)`,
-          backgroundPosition: `center ${50 + scrollY * 0.05}%`
-        }}
-      />
+      {/* Background video with parallax */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{ transform: `translateY(${backgroundY}px)` }}
+      >
+        <iframe
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          style={{
+            width: '300%',
+            height: '56.25vw',
+            minHeight: '100%',
+            minWidth: '177.77vh',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}
+          src="https://www.youtube.com/embed/c5HbY8jUkrg?autoplay=1&loop=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playlist=c5HbY8jUkrg&disablekb=1&fs=0&cc_load_policy=0&start=0&end=0"
+          title="Background Video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen={false}
+        />
+      </div>
       
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />

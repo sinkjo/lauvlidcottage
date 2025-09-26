@@ -8,9 +8,9 @@ export const it = {
     bookNow: "Prenota Ora"
   },
   hero: {
-    subtitle: "ALLOGGI DI LUSSO SUL MARE",
+    subtitle: "LAUVLID COTTAGE",
     title: "Vivi la Tranquillità del Mare",
-    description: "Scopri la nostra esclusiva collezione di appartamenti di lusso e camere d'albergo sul mare, che offrono comfort impareggiabile e viste mozzafiato sul mare.",
+    description: "Scopri il fascino autentico norvegese in questo accogliente cottage sul mare, dove viste meravigliose e un ambiente tranquillo creano la fuga perfetta.",
     bookStay: "Prenota il tuo Soggiorno",
     exploreApartments: "Esplora gli Appartamenti",
     scrollDown: "Scorri Giù"

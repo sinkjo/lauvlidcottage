@@ -8,9 +8,9 @@ export const en = {
     bookNow: "Book Now"
   },
   hero: {
-    subtitle: "BEACHFRONT LUXURY ACCOMMODATION",
+    subtitle: "LAUVLID COTTAGE",
     title: "Experience Seaside Tranquility",
-    description: "Discover our exclusive collection of luxury beachfront apartments and hotel rooms, offering unparalleled comfort and breathtaking sea views.",
+    description: "Discover authentic Norwegian charm at this cozy seaside cottage, where stunning views and peaceful surroundings create the perfect escape.",
     bookStay: "Book Your Stay",
     exploreApartments: "Explore Apartments",
     scrollDown: "Scroll Down"
