@@ -9,6 +9,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Wifi, Utensils, Waves, LifeBuoy, MapPin, Coffee } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import cottageInterior from "@/assets/cottage-interior.jpg";
+import cottageExterior from "@/assets/cottage-exterior.jpg";
+import cottageLake from "@/assets/cottage-lake.jpg";
+import cottageLiving from "@/assets/cottage-living.jpg";
 
 // Sample apartments data
 const featuredApartments: ApartmentProps[] = [
@@ -124,22 +128,29 @@ export default function Index() {
               <div className="relative animate-fade-in [animation-delay:300ms]">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=600&fit=crop"
-                    alt="Seaside view" 
+                    src={cottageInterior}
+                    alt="Cottage interior with sunset view" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1545579133-99bb5ab189bd?w=400&h=300&fit=crop"
-                    alt="Luxury apartment interior" 
+                    src={cottageLiving}
+                    alt="Cottage living area" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -top-6 -right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=400&h=300&fit=crop"
-                    alt="Pool view" 
+                    src={cottageExterior}
+                    alt="Cottage exterior" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-3 -right-3 w-1/3 rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={cottageLake}
+                    alt="Lake view with boats" 
                     className="w-full h-full object-cover"
                   />
                 </div>

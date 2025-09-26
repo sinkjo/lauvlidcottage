@@ -12,7 +12,7 @@ export const it = {
     title: "Vivi la Tranquillità del Mare",
     description: "Scopri il fascino autentico norvegese in questo accogliente cottage sul mare, dove viste meravigliose e un ambiente tranquillo creano la fuga perfetta.",
     bookStay: "Prenota il tuo Soggiorno",
-    exploreApartments: "Esplora gli Appartamenti",
+    exploreApartments: "Esplora",
     scrollDown: "Scorri Giù"
   },
   footer: {
@@ -218,11 +218,11 @@ export const it = {
   },
   home: {
     welcome: {
-      subtitle: "Benvenuti a MareSereno",
-      title: "Alloggi di Lusso sul Mare",
-      description1: "Situato sulla incontaminata costa mediterranea, MareSereno offre una squisita collezione di appartamenti di lusso e camere d'albergo. I nostri alloggi fronte mare combinano un design elegante con comfort moderni, creando l'ambientazione perfetta per una indimenticabile fuga al mare.",
-      description2: "Che tu stia cercando una fuga romantica, una vacanza in famiglia o un ritiro tranquillo, la nostra vasta gamma di alloggi si adatta a ogni preferenza ed esigenza. Ogni spazio è progettato con cura per fornire viste panoramiche sul mare e accesso diretto alla spiaggia.",
-      learnMore: "Scopri di Più"
+      subtitle: "Benvenuti a Tysnes",
+      title: "Cottage Tranquillo",
+      description1: "Circondati dalla serena bellezza dei fiordi e delle montagne norvegesi, vi invitiamo a rilassarvi in un ambiente accogliente ed elegante. Unendo il fascino tradizionale al comfort moderno, questo rifugio offre lo sfondo perfetto per un soggiorno memorabile.",
+      description2: "Che stiate cercando una fuga tranquilla, tempo di qualità con i vostri cari, o una base per avventure all'aria aperta, Lauvlid Cottage offre un'atmosfera ideale per ricaricarsi e godersi la tranquillità della Norvegia.",
+      learnMore: "Guarda dentro"
     },
     booking: {
       subtitle: "Prenota il tuo Soggiorno",

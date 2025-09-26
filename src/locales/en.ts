@@ -12,7 +12,7 @@ export const en = {
     title: "Experience Seaside Tranquility",
     description: "Discover authentic Norwegian charm at this cozy seaside cottage, where stunning views and peaceful surroundings create the perfect escape.",
     bookStay: "Book Your Stay",
-    exploreApartments: "Explore Apartments",
+    exploreApartments: "Explore",
     scrollDown: "Scroll Down"
   },
   footer: {
@@ -48,11 +48,11 @@ export const en = {
   },
   home: {
     welcome: {
-      subtitle: "Welcome to MareSereno",
-      title: "Luxury Seaside Accommodations",
-      description1: "Nestled on the pristine Mediterranean coastline, MareSereno offers an exquisite collection of luxury apartments and hotel rooms. Our beachfront accommodations combine elegant design with modern comfort, creating the perfect setting for an unforgettable seaside getaway.",
-      description2: "Whether you're seeking a romantic escape, a family vacation, or a peaceful retreat, our diverse range of accommodations caters to every preference and need. Each space is thoughtfully designed to provide panoramic sea views and direct beach access.",
-      learnMore: "Learn More"
+      subtitle: "Welcome to Tysnes",
+      title: "Peaceful Cottage",
+      description1: "Surrounded by the serene beauty of Norway's fjords and mountains, we invite you to unwind in a cozy yet elegant setting. Blending traditional charm with modern comfort, this retreat offers the perfect backdrop for a memorable stay.",
+      description2: "Whether you're looking for a peaceful escape, quality time with loved ones, or a base for outdoor adventures, Lauvlid Cottage provides an ideal atmosphere to recharge and enjoy the tranquility of Norway.",
+      learnMore: "Look inside"
     },
     booking: {
       subtitle: "Book Your Stay",
