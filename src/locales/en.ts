@@ -1,9 +1,8 @@
 export const en = {
   nav: {
     home: "Home",
-    apartments: "Apartments",
-    amenities: "Amenities",
     gallery: "Gallery",
+    thingsToDo: "Things to do",
     contact: "Contact",
     bookNow: "Book Now"
   },

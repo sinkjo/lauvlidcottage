@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
-            <h4 className="text-xl font-bold mb-4">MareSereno</h4>
+            <h4 className="text-xl font-bold mb-4">Lauvlid Cottage</h4>
             <p className="text-muted-foreground mb-4">
               {t.footer.description}
             </p>
@@ -37,9 +37,8 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { name: t.nav.home, path: "/" },
-                { name: t.nav.apartments, path: "/apartments" },
-                { name: t.nav.amenities, path: "/amenities" },
                 { name: t.nav.gallery, path: "/gallery" },
+                { name: t.nav.thingsToDo, path: "/things-to-do" },
                 { name: t.nav.contact, path: "/contact" },
                 { name: t.nav.bookNow, path: "/booking" },
               ].map((link) => (
@@ -100,7 +99,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-border pt-8 mt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} MareSereno. {t.footer.allRights}</p>
+          <p>&copy; {currentYear} Lauvlid Cottage. {t.footer.allRights}</p>
         </div>
       </div>
     </footer>

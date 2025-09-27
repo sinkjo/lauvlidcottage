@@ -15,9 +15,8 @@ export default function Navbar() {
   
   const navLinks = [
     { name: t.nav.home, path: "/" },
-    { name: t.nav.apartments, path: "/apartments" },
-    { name: t.nav.amenities, path: "/amenities" },
     { name: t.nav.gallery, path: "/gallery" },
+    { name: t.nav.thingsToDo, path: "/things-to-do" },
     { name: t.nav.contact, path: "/contact" }
   ];
 
