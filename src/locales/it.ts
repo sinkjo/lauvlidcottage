@@ -38,7 +38,7 @@ export const it = {
   },
   testimonials: {
     title: "Cosa Dicono i Nostri Ospiti",
-    description: "Scopri perché i nostri ospiti continuano a tornare a MareSereno per le loro fughe al mare."
+    description: "Scopri perché i nostri ospiti continuano a tornare a Lauvlid Cottage per le loro fughe al mare."
   },
   notFound: {
     title: "Pagina Non Trovata",
@@ -275,7 +275,7 @@ export const it = {
   amenitiesPage: {
     title: "I Nostri Servizi",
     subtitle: "Scopri i servizi e le comodità di lusso che rendono il tuo soggiorno indimenticabile.",
-    description: "A MareSereno, ci dedichiamo a fornire un'esperienza di soggiorno completa e lussuosa. Dai nostri servizi sulla spiaggia alle strutture di benessere, ogni dettaglio è stato curato per garantire il massimo comfort e piacere.",
+    description: "A Lauvlid Cottage, ci dedichiamo a fornire un'esperienza di soggiorno completa e lussuosa. Dai nostri servizi sulla spiaggia alle strutture di benessere, ogni dettaglio è stato curato per garantire il massimo comfort e piacere.",
     categories: {
       wellness: {
         title: "Benessere e Relax",

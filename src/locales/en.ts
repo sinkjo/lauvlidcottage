@@ -38,7 +38,7 @@ export const en = {
   },
   testimonials: {
     title: "What Our Guests Say",
-    description: "Discover why our guests keep coming back to MareSereno for their seaside getaways."
+    description: "Discover why our guests keep coming back to Lauvlid Cottage for their seaside getaways."
   },
   notFound: {
     title: "Page Not Found",
