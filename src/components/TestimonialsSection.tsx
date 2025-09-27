@@ -15,28 +15,52 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sophia Martinez",
-    location: "New York, USA",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces",
-    content: "My family and I had the most wonderful stay at MareSereno. The apartment was immaculate, with breathtaking sea views. The staff went above and beyond to make our vacation special.",
+    name: "Weijing",
+    location: "Rohrbach, Germany",
+    avatar: "",
+    content: "Perfect stay! The surrounding are peaceful and beautiful, the cabin is bigger than I thought and has everything you need. We enjoyed our stay very much, and this is definitely our favorite cabin during our two week trip around Bergen!",
     rating: 5
   },
   {
     id: 2,
-    name: "Marco Rossi",
-    location: "Rome, Italy",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=faces",
-    content: "Absolutely perfect location, steps away from the beach. The apartment had everything we needed and more. The modern amenities combined with the traditional coastal charm created a truly magical experience.",
+    name: "Caroline",
+    location: "Germany",
+    avatar: "",
+    content: "This cottage is a dream, and the view is simply breathtaking. Across the water lies a heron colony on a small island, and the sun can be enjoyed from early morning until late evening on the terrace. The boat is the ultimate bonus, letting you explore the beautiful, small fjords nearby. Everything was spotless and lovely.",
     rating: 5
   },
   {
     id: 3,
-    name: "Emma Johnson",
-    location: "London, UK",
-    avatar: "https://images.unsplash.com/photo-1569913486515-b74bf7751574?w=150&h=150&fit=crop&crop=faces",
-    content: "We spent a wonderful week at this beachfront paradise. The sunrise views from our terrace were worth the trip alone. Exceptionally clean and beautifully designed spaces.",
-    rating: 4
+    name: "Lise",
+    location: "Bergen, Norway",
+    avatar: "",
+    content: "This was our second time visiting the lovely cottage. The home has everything you need, it's bright and welcoming, and it offers a beautiful view. Outside the large windows there is rich birdlife for those who enjoy it.",
+    rating: 5
   },
+  {
+    id: 4,
+    name: "Christophe",
+    location: "Bougival, France",
+    avatar: "",
+    content: "A lovely cottage on the edge of the fjord – peaceful, comfortable, and with exceptional views. Perfect for a family holiday. I highly recommend this cottage for a complete immersion in Norwegian nature.",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Stefan",
+    location: "Schattdorf, Switzerland",
+    avatar: "",
+    content: "A beautiful, well-equipped house in a peaceful setting. The view over the water is fantastic and truly relaxing. We caught many large fish right from the jetty, so there was no need to use the boat for fishing.",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Karen",
+    location: "Hamburg, Germany",
+    avatar: "",
+    content: "We enjoyed every minute, and can only agree with all the other reviews. The house and the surroundings are even more beautiful than in the photos. The house is beautifully furnished and has everything you need. A special highlight was the boat. It was great fun to explore the surrounding fjords.",
+    rating: 5
+  }
 ];
 
 export default function TestimonialsSection() {
@@ -97,25 +121,18 @@ export default function TestimonialsSection() {
                       : "opacity-0 translate-x-full z-0"
                 )}
               >
-                <div className="flex flex-col md:flex-row gap-6 h-full">
-                  <div className="flex flex-col items-center md:items-start">
-                    <div className="rounded-full overflow-hidden w-20 h-20 mb-4 border-2 border-primary">
-                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.name} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                <div className="flex flex-col gap-6 h-full">
+                  <div className="flex flex-col items-center">
                     <div className="flex mb-2">
                       {[...Array(5)].map((_, i) => (
                         <Star 
                           key={i} 
-                          className={`h-4 w-4 ${i < testimonial.rating ? "fill-primary text-primary" : "text-muted-foreground"}`} 
+                          className="h-4 w-4 fill-primary text-primary" 
                         />
                       ))}
                     </div>
-                    <h4 className="text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground text-center md:text-left">{testimonial.location}</p>
+                    <h4 className="text-lg font-semibold text-center">{testimonial.name}</h4>
+                    <p className="text-sm text-muted-foreground text-center">{testimonial.location}</p>
                   </div>
                   
                   <div className="flex-1 flex items-center">
