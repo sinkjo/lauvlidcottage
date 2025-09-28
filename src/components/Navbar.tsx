@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "./ThemeToggle";
+
 import LanguageSelector from "./LanguageSelector";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -28,22 +28,26 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8">
           {navLinks.map(link => <li key={link.name} className="relative">
-              <Link to={link.path} className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
-                {link.name}
-              </Link>
+              {link.name === t.nav.home ? (
+                <Link to={link.path} className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+                  {link.name}
+                </Link>
+              ) : (
+                <Link to="/" className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+                  {link.name}
+                </Link>
+              )}
             </li>)}
         </ul>
 
         <div className="hidden md:flex items-center space-x-2">
-          <ThemeToggle />
           <Button asChild className="btn-primary">
-            <Link to="/booking">{t.nav.bookNow}</Link>
+            <a href="https://myrent.interhome.com/en/NO1928.603.1/" target="_blank" rel="noopener noreferrer">{t.nav.bookNow}</a>
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
-          <ThemeToggle />
           <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="rounded-full">
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -63,17 +67,23 @@ export default function Navbar() {
               </div>
               <ul className="space-y-6">
                 {navLinks.map(link => <li key={link.name}>
-                    <Link to={link.path} className="text-lg font-medium transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                      {link.name}
-                    </Link>
+                    {link.name === t.nav.home ? (
+                      <Link to={link.path} className="text-lg font-medium transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <Link to="/" className="text-lg font-medium transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                        {link.name}
+                      </Link>
+                    )}
                   </li>)}
               </ul>
             </div>
             
             <Button asChild className="w-full btn-primary mt-6">
-              <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>
+              <a href="https://myrent.interhome.com/en/NO1928.603.1/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                 {t.nav.bookNow}
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

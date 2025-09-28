@@ -51,11 +51,16 @@ export default function LanguageSelector() {
           </div>
         </SelectTrigger>
         <SelectContent align="start" className="w-[160px]">
-          {languages.map((language) => (
-            <SelectItem key={language.code} value={language.code} className="cursor-pointer">
+          {languages.map((lang) => (
+            <SelectItem 
+              key={lang.code} 
+              value={lang.code} 
+              className={lang.code === 'it' ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}
+              disabled={lang.code === 'it'}
+            >
               <div className="flex items-center space-x-2">
-                <span>{language.flag}</span>
-                <span>{language.name}</span>
+                <span>{lang.flag}</span>
+                <span>{lang.name}</span>
               </div>
             </SelectItem>
           ))}
