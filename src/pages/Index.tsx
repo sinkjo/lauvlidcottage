@@ -7,7 +7,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wifi, Utensils, Waves, LifeBuoy, MapPin, Coffee } from "lucide-react";
+import { ArrowRight, Wifi, Trees, Waves, Ship, MapPin, Home } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import cottageInterior from "@/assets/cottage-interior.jpg";
 import cottageExterior from "@/assets/cottage-exterior.jpg";
@@ -67,12 +67,12 @@ export default function Index() {
       description: t.home.amenities.features.beachfront.description
     },
     {
-      icon: <LifeBuoy className="h-8 w-8 text-primary" />,
+      icon: <Ship className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.pools.title,
       description: t.home.amenities.features.pools.description
     },
     {
-      icon: <Utensils className="h-8 w-8 text-primary" />,
+      icon: <Trees className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.restaurant.title,
       description: t.home.amenities.features.restaurant.description
     },
@@ -82,7 +82,7 @@ export default function Index() {
       description: t.home.amenities.features.wifi.description
     },
     {
-      icon: <Coffee className="h-8 w-8 text-primary" />,
+      icon: <Home className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.bar.title,
       description: t.home.amenities.features.bar.description
     },

@@ -15,13 +15,9 @@ export const it = {
     scrollDown: "Scorri Giù"
   },
   footer: {
-    description: "Appartamenti di lusso sul mare e camere d'albergo con splendide viste sul mare, che offrono il perfetto connubio di comfort ed eleganza per la tua vacanza da sogno.",
-    quickLinks: "Link Rapidi",
+    description: "Accogliente cottage con splendide viste sul mare, offrendo la perfetta combinazione di comfort ed eleganza per la tua vacanza da sogno.",
+    quickLinks: "Link Utili",
     contact: "Contatti",
-    newsletter: "Newsletter",
-    newsletterDesc: "Iscriviti alla nostra newsletter per offerte speciali e aggiornamenti.",
-    yourEmail: "Il tuo indirizzo email",
-    subscribe: "Iscriviti",
     allRights: "Tutti i diritti riservati."
   },
   bookingForm: {
@@ -236,33 +232,33 @@ export const it = {
       viewAll: "Visualizza Tutti gli Appartamenti"
     },
     amenities: {
-      subtitle: "Servizi dell'Hotel",
-      title: "Vivi il Meglio",
-      description: "Goditi le nostre strutture e servizi premium progettati per rendere il tuo soggiorno eccezionale.",
+      subtitle: "Servizi",
+      title: "L'Esperienza",
+      description: "Goditi le nostre strutture per rendere il tuo soggiorno piacevole.",
       features: {
         beachfront: {
-          title: "Posizione Fronte Mare",
-          description: "Accesso diretto a spiagge incontaminate con acque cristalline."
+          title: "Molo Privato",
+          description: "Accesso diretto al molo privato."
         },
         pools: {
-          title: "Piscine",
-          description: "Rilassati accanto alle nostre piscine a sfioro con vista mozzafiato sul mare."
+          title: "Barca",
+          description: "Vai a pescare o fare escursioni con la tua barca."
         },
         restaurant: {
-          title: "Ristorante Gourmet",
-          description: "Goditi squisita cucina locale e internazionale."
+          title: "Vivere nella natura",
+          description: "Goditi un soggiorno privato nella natura."
         },
         wifi: {
           title: "Wi-Fi ad Alta Velocità",
           description: "Rimani connesso con internet ad alta velocità gratuito."
         },
         bar: {
-          title: "Bar & Caffè sulla Spiaggia",
-          description: "Bevande rinfrescanti e snack serviti direttamente sulla spiaggia."
+          title: "Completamente attrezzato",
+          description: "Rilassati in un cottage completamente attrezzato di alto livello"
         },
         location: {
           title: "Posizione Privilegiata",
-          description: "Vicino alle attrazioni locali, negozi e ristoranti."
+          description: "Vicino alle attrazioni locali, escursioni e negozi."
         }
       }
     },

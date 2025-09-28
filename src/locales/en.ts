@@ -15,13 +15,9 @@ export const en = {
     scrollDown: "Scroll Down"
   },
   footer: {
-    description: "Luxurious beachfront apartments and hotel rooms with stunning sea views, offering the perfect blend of comfort and elegance for your dream vacation.",
+    description: "Cozy cottage with stunning sea views, offering the perfect blend of comfort and elegance for your dream vacation.",
     quickLinks: "Quick Links",
     contact: "Contact",
-    newsletter: "Newsletter",
-    newsletterDesc: "Subscribe to our newsletter for special deals and updates.",
-    yourEmail: "Your email address",
-    subscribe: "Subscribe",
     allRights: "All rights reserved."
   },
   bookingForm: {
@@ -66,33 +62,33 @@ export const en = {
       viewAll: "View All Apartments"
     },
     amenities: {
-      subtitle: "Hotel Amenities",
-      title: "Experience The Best",
-      description: "Enjoy our premium facilities and services designed to make your stay exceptional.",
+      subtitle: "Amenities",
+      title: "The Experience",
+      description: "Enjoy our facilities to make your stay pleasant.",
       features: {
         beachfront: {
-          title: "Beachfront Location",
-          description: "Direct access to pristine beaches with crystal clear waters."
+          title: "Private Jetty",
+          description: "Direct access to private jetty."
         },
         pools: {
-          title: "Swimming Pools",
-          description: "Relax by our infinity pools with stunning sea views."
+          title: "Boat",
+          description: "Go fishing or sightseeing with your own boat."
         },
         restaurant: {
-          title: "Gourmet Restaurant",
-          description: "Enjoy exquisite local and international cuisine."
+          title: "Live in nature",
+          description: "Enjoy a private stay in nature."
         },
         wifi: {
           title: "High-Speed Wi-Fi",
           description: "Stay connected with complimentary high-speed internet."
         },
         bar: {
-          title: "Beach Bar & Café",
-          description: "Refreshing drinks and snacks served right on the beach."
+          title: "Fully equipped",
+          description: "Relax in fully equipped high-standard cottage"
         },
         location: {
           title: "Prime Location",
-          description: "Close to local attractions, shops, and restaurants."
+          description: "Close to local attractions, hikes and shops."
         }
       }
     },
