@@ -28,16 +28,16 @@ export default function HeroSection() {
     <section className="relative h-screen overflow-hidden">
       {/* Background video */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          <iframe 
-            src="https://player.vimeo.com/video/1122455288?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&background=1" 
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover"
-            frameBorder="0" 
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin"
-            title="Kjosåshytta"
-          />
-        </div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
+          style={{ transform: `translate(-50%, calc(-50% + ${backgroundY}px))` }}
+        >
+          <source src="/videos/kjosashytta.mp4" type="video/mp4" />
+        </video>
       </div>
       
       {/* Gradient overlay */}
