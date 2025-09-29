@@ -94,7 +94,7 @@ export const en = {
     },
     cta: {
       title: "Ready for Your Dream Vacation?",
-      description: "Book your stay today and experience the perfect blend of luxury, comfort, and stunning sea views.",
+      description: "Book your stay today and experience the perfect blend of nature, comfort, and stunning sea views.",
       bookNow: "Book Now"
     }
   },

@@ -264,7 +264,7 @@ export const it = {
     },
     cta: {
       title: "Pronto per la tua Vacanza da Sogno?",
-      description: "Prenota il tuo soggiorno oggi e vivi il perfetto connubio di lusso, comfort e viste mozzafiato sul mare.",
+      description: "Prenota il tuo soggiorno oggi e vivi il perfetto connubio di natura, comfort e viste mozzafiato sul mare.",
       bookNow: "Prenota Ora"
     }
   },

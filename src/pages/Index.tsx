@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -95,6 +96,9 @@ export default function Index() {
   
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Lauvlid Cottage</title>
+      </Helmet>
       <Navbar />
       
       <main className="flex-1">
