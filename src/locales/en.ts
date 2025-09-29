@@ -44,7 +44,7 @@ export const en = {
   home: {
     welcome: {
       subtitle: "Welcome to Tysnes",
-      title: "Peaceful Cottage",
+      title: "A fjordside retreat",
       description1: "Surrounded by the serene beauty of Norway's fjords and mountains, we invite you to unwind in a cozy yet elegant setting. Blending traditional charm with modern comfort, this retreat offers the perfect backdrop for a memorable stay.",
       description2: "Whether you're looking for a peaceful escape, quality time with loved ones, or a base for outdoor adventures, Lauvlid Cottage provides an ideal atmosphere to recharge and enjoy the tranquility of Norway.",
       learnMore: "Look inside"

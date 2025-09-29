@@ -214,7 +214,7 @@ export const it = {
   home: {
     welcome: {
       subtitle: "Benvenuti a Tysnes",
-      title: "Cottage Tranquillo",
+      title: "Un rifugio sui fiordi",
       description1: "Circondati dalla serena bellezza dei fiordi e delle montagne norvegesi, vi invitiamo a rilassarvi in un ambiente accogliente ed elegante. Unendo il fascino tradizionale al comfort moderno, questo rifugio offre lo sfondo perfetto per un soggiorno memorabile.",
       description2: "Che stiate cercando una fuga tranquilla, tempo di qualità con i vostri cari, o una base per avventure all'aria aperta, Lauvlid Cottage offre un'atmosfera ideale per ricaricarsi e godersi la tranquillità della Norvegia.",
       learnMore: "Guarda dentro"
