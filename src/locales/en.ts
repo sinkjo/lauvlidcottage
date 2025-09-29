@@ -67,28 +67,28 @@ export const en = {
       description: "Enjoy our facilities to make your stay pleasant.",
       features: {
         beachfront: {
-          title: "Private Jetty",
-          description: "Direct access to private jetty."
+          title: "Private dock",
+          description: "Step straight onto your private dock and enjoy the fjord at your doorstep."
         },
         pools: {
           title: "Boat",
-          description: "Go fishing or sightseeing with your own boat."
+          description: "Explore the fjords or fish directly from your own boat."
         },
         restaurant: {
-          title: "Live in nature",
-          description: "Enjoy a private stay in nature."
+          title: "Immersed in nature",
+          description: "Wake up to bird songs and panoramic views in a serene natural setting."
         },
         wifi: {
           title: "High-Speed Wi-Fi",
-          description: "Stay connected with complimentary high-speed internet."
+          description: "Stay connected with complimentary high-speed internet – perfect for work or streaming."
         },
         bar: {
-          title: "Fully equipped",
-          description: "Relax in fully equipped high-standard cottage"
+          title: "Fully Equipped Cottage",
+          description: "Cook, relax, and unwind in a modern cottage with everything you need."
         },
         location: {
-          title: "Prime Location",
-          description: "Close to local attractions, hikes and shops."
+          title: "Perfect Location",
+          description: "Conveniently close to shops, hiking trails, and cultural sites."
         }
       }
     },

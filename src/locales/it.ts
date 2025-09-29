@@ -237,28 +237,28 @@ export const it = {
       description: "Goditi le nostre strutture per rendere il tuo soggiorno piacevole.",
       features: {
         beachfront: {
-          title: "Molo Privato",
-          description: "Accesso diretto al molo privato."
+          title: "Molo privato",
+          description: "Cammina direttamente sul tuo molo privato e goditi il fiordo alla tua porta."
         },
         pools: {
           title: "Barca",
-          description: "Vai a pescare o fare escursioni con la tua barca."
+          description: "Esplora i fiordi o pesca direttamente dalla tua barca."
         },
         restaurant: {
-          title: "Vivere nella natura",
-          description: "Goditi un soggiorno privato nella natura."
+          title: "Immerso nella natura",
+          description: "Svegliati con il canto degli uccelli e viste panoramiche in un ambiente naturale sereno."
         },
         wifi: {
           title: "Wi-Fi ad Alta Velocità",
-          description: "Rimani connesso con internet ad alta velocità gratuito."
+          description: "Rimani connesso con internet ad alta velocità gratuito – perfetto per lavorare o streaming."
         },
         bar: {
-          title: "Completamente attrezzato",
-          description: "Rilassati in un cottage completamente attrezzato di alto livello"
+          title: "Cottage Completamente Attrezzato",
+          description: "Cucina, rilassati e distenditi in un cottage moderno con tutto ciò di cui hai bisogno."
         },
         location: {
-          title: "Posizione Privilegiata",
-          description: "Vicino alle attrazioni locali, escursioni e negozi."
+          title: "Posizione Perfetta",
+          description: "Convenientemente vicino a negozi, sentieri escursionistici e siti culturali."
         }
       }
     },
