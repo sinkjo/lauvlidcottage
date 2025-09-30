@@ -18,7 +18,7 @@ type Language = {
 
 const languages: Language[] = [
   { code: "en", name: "English", flag: "🇬🇧" },
-  { code: "it", name: "Italiano", flag: "🇮🇹" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
 ];
 
 export default function LanguageSelector() {
@@ -55,8 +55,7 @@ export default function LanguageSelector() {
             <SelectItem 
               key={lang.code} 
               value={lang.code} 
-              className={lang.code === 'it' ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}
-              disabled={lang.code === 'it'}
+              className="cursor-pointer"
             >
               <div className="flex items-center space-x-2">
                 <span>{lang.flag}</span>
