@@ -36,7 +36,7 @@ export default function HeroSection() {
           className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
           style={{ transform: `translate(-50%, calc(-50% + ${backgroundY}px))` }}
         >
-          <source src="https://pub-85a4cc7653f4462a8aacba3a49e3c3d6.r2.dev/banner-movie.mp4" type="video/mp4" />
+          <source src="/videos/banner-movie-low.mp4" type="video/mp4" />
         </video>
       </div>
       
