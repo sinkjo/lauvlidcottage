@@ -12,6 +12,15 @@ import exteriorCabin2 from "@/assets/exterior-cabin-2.webp";
 import exteriorCabin4 from "@/assets/exterior-cabin-4.webp";
 import exteriorCabin5 from "@/assets/exterior-cabin-5.webp";
 import exteriorSunset from "@/assets/exterior-sunset.jpg";
+import interiorBedroom1 from "@/assets/interior-bedroom-1.webp";
+import interiorBedroom3 from "@/assets/interior-bedroom-3.webp";
+import interiorBedroomMaster from "@/assets/interior-bedroom-master.webp";
+import interiorKitchen1 from "@/assets/interior-kitchen-1.webp";
+import interiorKitchen2 from "@/assets/interior-kitchen-2.webp";
+import interiorKitchen3 from "@/assets/interior-kitchen-3.webp";
+import interiorLivingRoom2 from "@/assets/interior-living-room-2.webp";
+import interiorLivingRoom3 from "@/assets/interior-living-room-3.webp";
+import interiorLivingRoom4 from "@/assets/interior-living-room-4.webp";
 
 // Sample gallery images
 const galleryImages = [
@@ -23,69 +32,69 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
-    alt: "Luxury suite interior",
-    category: "rooms"
+    src: interiorBedroomMaster,
+    alt: "Master bedroom with lake view",
+    category: "interior"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1584132905271-512c958d674a?w=800&h=600&fit=crop",
-    alt: "Swimming pool",
-    category: "amenities"
+    src: interiorKitchen1,
+    alt: "Modern kitchen and dining area",
+    category: "interior"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&h=600&fit=crop",
-    alt: "Premium apartment",
-    category: "rooms"
-  },
-  {
-    id: 5,
     src: exteriorCabin1,
     alt: "Cabin exterior view",
     category: "exterior"
   },
   {
+    id: 5,
+    src: interiorLivingRoom2,
+    alt: "Living room with panoramic view",
+    category: "interior"
+  },
+  {
     id: 6,
-    src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&h=600&fit=crop",
-    alt: "Dining area",
-    category: "amenities"
+    src: interiorBedroom1,
+    alt: "Cozy bedroom interior",
+    category: "interior"
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop",
-    alt: "Bathroom",
-    category: "rooms"
-  },
-  {
-    id: 8,
     src: exteriorCabin2,
     alt: "Cabin with lake view",
     category: "exterior"
   },
   {
+    id: 8,
+    src: interiorKitchen2,
+    alt: "Bright kitchen with view",
+    category: "interior"
+  },
+  {
     id: 9,
-    src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
-    alt: "Restaurant",
-    category: "amenities"
+    src: interiorBedroom3,
+    alt: "Light bedroom with natural wood",
+    category: "interior"
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&h=600&fit=crop",
-    alt: "Bedroom",
-    category: "rooms"
-  },
-  {
-    id: 11,
     src: exteriorCabin4,
     alt: "Cabin hillside view",
     category: "exterior"
   },
   {
+    id: 11,
+    src: interiorKitchen3,
+    alt: "Kitchen with fireplace",
+    category: "interior"
+  },
+  {
     id: 12,
-    src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop",
-    alt: "Spa",
-    category: "amenities"
+    src: interiorLivingRoom3,
+    alt: "Comfortable living area",
+    category: "interior"
   },
   {
     id: 13,
@@ -95,12 +104,18 @@ const galleryImages = [
   },
   {
     id: 14,
+    src: interiorLivingRoom4,
+    alt: "Work space with lake view",
+    category: "interior"
+  },
+  {
+    id: 15,
     src: exteriorBoat,
     alt: "Boat and dock",
     category: "exterior"
   },
   {
-    id: 15,
+    id: 16,
     src: exteriorSunset,
     alt: "Sunset over the lake",
     category: "exterior"
@@ -192,7 +207,7 @@ export default function Gallery() {
         <section className="py-8">
           <div className="container">
             <div className="flex flex-wrap justify-center gap-2 mb-8 animate-fade-in">
-              {["all", "exterior", "rooms", "amenities"].map((category) => (
+              {["all", "exterior", "interior"].map((category) => (
                 <button
                   key={category}
                   onClick={() => filterGallery(category)}
@@ -207,9 +222,7 @@ export default function Gallery() {
                     ? t.gallery.filters.all 
                     : category === "exterior" 
                       ? t.gallery.filters.exterior 
-                      : category === "rooms" 
-                        ? t.gallery.filters.rooms 
-                        : t.gallery.filters.amenities}
+                      : t.gallery.filters.interior}
                 </button>
               ))}
             </div>

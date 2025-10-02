@@ -128,8 +128,7 @@ export const en = {
     filters: {
       all: "All",
       exterior: "Exterior",
-      rooms: "Rooms",
-      amenities: "Amenities"
+      interior: "Interior"
     }
   },
   booking: {
