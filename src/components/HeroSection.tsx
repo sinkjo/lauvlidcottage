@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 export default function HeroSection() {
   const { t } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,15 @@ export default function HeroSection() {
     
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  useEffect(() => {
+    // Eksplisitt play() for å sikre autoplay i Chrome på iOS
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Autoplay was prevented:", error);
+      });
+    }
   }, []);
   
   // Calculate parallax effect
@@ -29,10 +39,13 @@ export default function HeroSection() {
       {/* Background video */}
       <div className="absolute inset-0 overflow-hidden">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          webkit-playsinline="true"
+          preload="auto"
           className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
           style={{ transform: `translate(-50%, calc(-50% + ${backgroundY}px))` }}
         >
