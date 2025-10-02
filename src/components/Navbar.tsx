@@ -15,8 +15,7 @@ export default function Navbar() {
   const navLinks = [
     { name: t.nav.home, path: "/" },
     { name: t.nav.gallery, path: "/gallery" },
-    { name: t.nav.thingsToDo, path: "/things-to-do" },
-    { name: t.nav.contact, path: "/contact" }
+    { name: t.nav.thingsToDo, path: "/things-to-do" }
   ];
   
   return <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md transition-all duration-300">
@@ -28,15 +27,9 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8">
           {navLinks.map(link => <li key={link.name} className="relative">
-              {link.name === t.nav.home ? (
-                <Link to={link.path} className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
-                  {link.name}
-                </Link>
-              ) : (
-                <Link to="/" className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
-                  {link.name}
-                </Link>
-              )}
+              <Link to={link.path} className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+                {link.name}
+              </Link>
             </li>)}
         </ul>
 
@@ -56,7 +49,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={cn("fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden transition-opacity duration-300", mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
-        <div className={cn("fixed inset-y-0 right-0 w-3/4 max-w-sm bg-card shadow-xl p-6 transition-transform duration-300 ease-in-out", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
+        <div className={cn("fixed inset-y-0 right-0 w-3/4 max-w-sm bg-white dark:bg-card shadow-xl p-6 transition-transform duration-300 ease-in-out", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
           <div className="flex flex-col h-full justify-between">
             <div>
               <div className="flex justify-between mb-8">
@@ -67,15 +60,9 @@ export default function Navbar() {
               </div>
               <ul className="space-y-6">
                 {navLinks.map(link => <li key={link.name}>
-                    {link.name === t.nav.home ? (
-                      <Link to={link.path} className="text-lg font-medium transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                        {link.name}
-                      </Link>
-                    ) : (
-                      <Link to="/" className="text-lg font-medium transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                        {link.name}
-                      </Link>
-                    )}
+                    <Link to={link.path} className="text-lg font-medium transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                      {link.name}
+                    </Link>
                   </li>)}
               </ul>
             </div>

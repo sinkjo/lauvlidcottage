@@ -76,7 +76,7 @@ export default function HeroSection() {
               <a href="https://myrent.interhome.com/en/NO1928.603.1/" target="_blank" rel="noopener noreferrer">{t.hero.bookStay}</a>
             </Button>
             <Button asChild variant="hero" size="lg" className="min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px]">
-              <Link to="/">{t.hero.exploreApartments}</Link>
+              <Link to="/gallery">{t.hero.exploreApartments}</Link>
             </Button>
           </div>
         </div>

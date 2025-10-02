@@ -37,9 +37,8 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { name: t.nav.home, path: "/" },
-                { name: t.nav.gallery, path: "/" },
-                { name: t.nav.thingsToDo, path: "/" },
-                { name: t.nav.contact, path: "/" },
+                { name: t.nav.gallery, path: "/gallery" },
+                { name: t.nav.thingsToDo, path: "/things-to-do" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
