@@ -5,13 +5,20 @@ import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
+import exteriorBalcony from "@/assets/exterior-balcony.png";
+import exteriorBoat from "@/assets/exterior-boat.jpg";
+import exteriorCabin1 from "@/assets/exterior-cabin-1.webp";
+import exteriorCabin2 from "@/assets/exterior-cabin-2.webp";
+import exteriorCabin4 from "@/assets/exterior-cabin-4.webp";
+import exteriorCabin5 from "@/assets/exterior-cabin-5.webp";
+import exteriorSunset from "@/assets/exterior-sunset.jpg";
 
 // Sample gallery images
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
-    alt: "Beachfront view",
+    src: exteriorBalcony,
+    alt: "Balcony with lake view",
     category: "exterior"
   },
   {
@@ -34,8 +41,8 @@ const galleryImages = [
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&h=600&fit=crop",
-    alt: "Beach sunset",
+    src: exteriorCabin1,
+    alt: "Cabin exterior view",
     category: "exterior"
   },
   {
@@ -52,8 +59,8 @@ const galleryImages = [
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&h=600&fit=crop",
-    alt: "Beach pathway",
+    src: exteriorCabin2,
+    alt: "Cabin with lake view",
     category: "exterior"
   },
   {
@@ -70,8 +77,8 @@ const galleryImages = [
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=600&fit=crop",
-    alt: "Beach umbrellas",
+    src: exteriorCabin4,
+    alt: "Cabin hillside view",
     category: "exterior"
   },
   {
@@ -79,6 +86,24 @@ const galleryImages = [
     src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop",
     alt: "Spa",
     category: "amenities"
+  },
+  {
+    id: 13,
+    src: exteriorCabin5,
+    alt: "Cabin lakeside",
+    category: "exterior"
+  },
+  {
+    id: 14,
+    src: exteriorBoat,
+    alt: "Boat and dock",
+    category: "exterior"
+  },
+  {
+    id: 15,
+    src: exteriorSunset,
+    alt: "Sunset over the lake",
+    category: "exterior"
   },
 ];
 
