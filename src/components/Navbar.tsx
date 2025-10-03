@@ -49,8 +49,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={cn("fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden transition-opacity duration-300", mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
-        <div className={cn("fixed inset-y-0 right-0 w-3/4 max-w-sm bg-white/95 dark:bg-card/95 backdrop-blur-lg shadow-xl p-6 transition-transform duration-300 ease-in-out", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
-          <div className="flex flex-col h-full justify-between">
+        <div className={cn("fixed inset-y-0 right-0 w-3/4 max-w-sm bg-background shadow-xl p-6 transition-transform duration-300 ease-in-out", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
+          <div className="flex flex-col h-full justify-between bg-background">
             <div>
               <div className="flex justify-between mb-8">
                 <LanguageSelector />
