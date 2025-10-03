@@ -95,7 +95,7 @@ export default function Index() {
   ];
   
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Helmet>
         <title>Lauvlid Cottage</title>
       </Helmet>
@@ -106,7 +106,7 @@ export default function Index() {
         <HeroSection />
         
         {/* Welcome Section */}
-        <section id="welcome" className="section">
+        <section id="welcome" className="section overflow-hidden">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in [animation-delay:100ms]">
@@ -129,7 +129,7 @@ export default function Index() {
                 </Button>
               </div>
               
-              <div className="relative animate-fade-in [animation-delay:300ms]">
+              <div className="relative animate-fade-in [animation-delay:300ms] px-4 md:px-0">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <img 
                     src={cottageInterior}
@@ -137,21 +137,21 @@ export default function Index() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-6 -left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
+                <div className="hidden lg:block absolute -bottom-6 -left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={cottageLiving}
                     alt="Cottage living area" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -top-6 -right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
+                <div className="hidden lg:block absolute -top-6 -right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={cottageExterior}
                     alt="Cottage exterior" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-3 -right-3 w-1/3 rounded-2xl overflow-hidden shadow-xl">
+                <div className="hidden lg:block absolute -bottom-3 -right-3 w-1/3 rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={cottageLake}
                     alt="Lake view with boats" 
