@@ -2,9 +2,9 @@ export const en = {
   nav: {
     home: "Home",
     gallery: "Gallery",
-    yourStay: "Your Stay",
+    yourStay: "Your stay",
     contact: "Contact",
-    bookNow: "Book Now"
+    bookNow: "Book now"
   },
   hero: {
     subtitle: "LAUVLID COTTAGE",

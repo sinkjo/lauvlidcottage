@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import vageSunset from "@/assets/vage-sunset.webp";
 
 export default function YourStay() {
   const { t } = useLanguage();
@@ -21,6 +22,14 @@ export default function YourStay() {
             <p>
               For tips on what Tysnes offers, check out <a href="https://www.visittysnes.no/en-gb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Visit Tysnes</a>!
             </p>
+          </div>
+          
+          <div className="mt-12">
+            <img 
+              src={vageSunset} 
+              alt="Beautiful sunset view over Våge and the surrounding fjords" 
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </main>
