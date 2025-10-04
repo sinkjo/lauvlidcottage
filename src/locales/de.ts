@@ -2,7 +2,7 @@ export const de = {
   nav: {
     home: "Startseite",
     gallery: "Galerie",
-    thingsToDo: "Aktivitäten",
+    yourStay: "Ihr Aufenthalt",
     contact: "Kontakt",
     bookNow: "Jetzt buchen"
   },

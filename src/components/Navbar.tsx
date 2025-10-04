@@ -15,7 +15,7 @@ export default function Navbar() {
   const navLinks = [
     { name: t.nav.home, path: "/" },
     { name: t.nav.gallery, path: "/gallery" },
-    { name: t.nav.thingsToDo, path: "/things-to-do" }
+    { name: t.nav.yourStay, path: "/your-stay" }
   ];
   
   return <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md transition-all duration-300">

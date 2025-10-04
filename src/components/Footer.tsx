@@ -38,7 +38,7 @@ export default function Footer() {
               {[
                 { name: t.nav.home, path: "/" },
                 { name: t.nav.gallery, path: "/gallery" },
-                { name: t.nav.thingsToDo, path: "/things-to-do" },
+                { name: t.nav.yourStay, path: "/your-stay" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
