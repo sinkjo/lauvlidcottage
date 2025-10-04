@@ -83,7 +83,7 @@ export default function HeroSection() {
       </div>
       
       {/* Scroll down indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center text-white animate-bounce">
         <a 
           href="#welcome" 
           className="flex flex-col items-center text-center opacity-70 hover:opacity-100 transition-opacity"
