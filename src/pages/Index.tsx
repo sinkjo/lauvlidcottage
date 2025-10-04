@@ -123,9 +123,9 @@ export default function Index() {
                   {t.home.welcome.description2}
                 </p>
                 <Button asChild className="btn-primary">
-                  <a href="https://myrent.interhome.com/en/NO1928.603.1/" target="_blank" rel="noopener noreferrer">
+                  <Link to="/gallery">
                     {t.home.welcome.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
               

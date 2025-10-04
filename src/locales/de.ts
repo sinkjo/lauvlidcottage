@@ -124,12 +124,18 @@ export const de = {
   },
   gallery: {
     title: "Fotogalerie",
-    subtitle: "Erkunden Sie unser Paradies am Fjord durch faszinierende Bilder.",
+    subtitle: "Erkunden Sie unser Paradies am Fjord.",
     filters: {
       all: "Alle",
       exterior: "Außenbereich",
       interior: "Innenbereich"
     }
+  },
+  yourStay: {
+    title: "Ihr Aufenthalt",
+    intro: "Unser Ferienhaus liegt wunderschön in Våge, einem charmanten Küstendorf, das sowohl Ruhe als auch einfachen Zugang zur Stadt bietet. Mit nur kurzer Entfernung zu Bergen und dem Flughafen Flesland ist die Anreise einfach – doch sobald Sie ankommen, fühlen Sie sich weit weg vom Alltag.",
+    description: "Våge und die umliegenden Inseln sind ein fantastisches Reiseziel für alle, die Küstenkultur, Leben am Meer und atemberaubende Landschaften erleben möchten. Vom Ferienhaus aus sind Sie nah an Wanderwegen, großartigen Angelplätzen und spannenden Aktivitäten für die ganze Familie. Ob Sie sich entspannen und die Fjordaussicht genießen, die lokale Umgebung erkunden oder einen Tagesausflug nach Bergen unternehmen möchten – dies ist der ideale Ausgangspunkt für das Beste aus beiden Welten.",
+    visitLink: "Für Tipps, was Tysnes zu bieten hat, besuchen Sie Visit Tysnes!"
   },
   booking: {
     title: "Buchen Sie Ihren Aufenthalt",

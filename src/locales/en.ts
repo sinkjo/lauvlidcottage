@@ -131,6 +131,12 @@ export const en = {
       interior: "Interior"
     }
   },
+  yourStay: {
+    title: "Your stay",
+    intro: "Our cottage is beautifully situated in Våge, a charming coastal village that offers both tranquility and easy access to the city. With only a short distance to Bergen and Flesland Airport, getting here is simple—yet once you arrive, you'll feel far away from the everyday hustle.",
+    description: "Våge and the surrounding islands are a fantastic destination for anyone looking to experience coastal culture, life by the sea, and breathtaking scenery. From the cottage, you are close to hiking trails, great fishing spots, and exciting activities for the whole family. Whether you want to relax and enjoy the fjord views, explore the local area, or take a day trip to Bergen, this is the ideal starting point for the best of both worlds.",
+    visitLink: "For tips on what Tysnes offers, check out Visit Tysnes!"
+  },
   booking: {
     title: "Book Your Stay",
     subtitle: "Complete your reservation in a few simple steps.",
