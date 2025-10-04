@@ -8,7 +8,7 @@ export const en = {
   },
   hero: {
     subtitle: "LAUVLID COTTAGE",
-    title: "Experience Seaside Tranquility",
+    title: "Experience seaside tranquility",
     description: "Discover authentic Norwegian charm at this cozy seaside cottage, where stunning views and peaceful surroundings create the perfect escape.",
     bookStay: "Book Your Stay",
     exploreApartments: "Explore",
@@ -124,7 +124,7 @@ export const en = {
   },
   gallery: {
     title: "Photo Gallery",
-    subtitle: "Explore our seaside paradise through captivating imagery.",
+    subtitle: "Explore our seaside paradise.",
     filters: {
       all: "All",
       exterior: "Exterior",

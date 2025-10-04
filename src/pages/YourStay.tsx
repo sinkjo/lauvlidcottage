@@ -11,7 +11,7 @@ export default function YourStay() {
       <Navbar />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Your Stay</h1>
+          <h1 className="text-4xl font-bold text-center mb-8">Your stay</h1>
           <div className="max-w-3xl mx-auto space-y-6 text-lg text-muted-foreground">
             <p>
               Our cottage is beautifully situated in Våge, a charming coastal village that offers both tranquility and easy access to the city. With only a short distance to Bergen and Flesland Airport, getting here is simple—yet once you arrive, you'll feel far away from the everyday hustle.
