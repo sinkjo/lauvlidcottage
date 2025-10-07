@@ -7,11 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useHreflang } from "@/hooks/useHreflang";
 
 export default function Contact() {
   const { t } = useLanguage();
-  const hreflangTags = useHreflang();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,7 +53,6 @@ export default function Contact() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      {hreflangTags}
       <Navbar />
       
       <main className="flex-1 pt-20">

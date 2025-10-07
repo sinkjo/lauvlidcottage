@@ -7,20 +7,15 @@ import { cn } from "@/lib/utils";
 import LanguageSelector from "./LanguageSelector";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { routes, getLanguageFromPath } from "@/config/routes";
-import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const { t } = useLanguage();
-  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
-  const currentLang = getLanguageFromPath(location.pathname) as 'en' | 'de';
-  
   const navLinks = [
-    { name: t.nav.home, path: routes[currentLang].home },
-    { name: t.nav.gallery, path: routes[currentLang].gallery },
-    { name: t.nav.yourStay, path: routes[currentLang].yourStay }
+    { name: t.nav.home, path: "/" },
+    { name: t.nav.gallery, path: "/gallery" },
+    { name: t.nav.yourStay, path: "/your-stay" }
   ];
   
   return <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md transition-all duration-300">
