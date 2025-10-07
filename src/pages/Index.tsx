@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Wifi, Trees, Waves, Ship, MapPin, Home } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useHreflang } from "@/hooks/useHreflang";
 import cottageInterior from "@/assets/cottage-interior.jpg";
 import cottageExterior from "@/assets/cottage-exterior.jpg";
 import cottageLake from "@/assets/cottage-lake.jpg";
@@ -54,6 +55,7 @@ const featuredApartments: ApartmentProps[] = [
 
 export default function Index() {
   const { t } = useLanguage();
+  const hreflangTags = useHreflang();
   
   useEffect(() => {
     // Scroll to top when component mounts
@@ -96,6 +98,7 @@ export default function Index() {
   
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
+      {hreflangTags}
       <Helmet>
         <title>Lauvlid Cottage</title>
       </Helmet>

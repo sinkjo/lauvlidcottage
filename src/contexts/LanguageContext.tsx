@@ -1,7 +1,9 @@
 
 import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { en } from '../locales/en';
 import { de } from '../locales/de';
+import { routes, getLanguageFromPath, getRouteNameFromPath, type Language } from '@/config/routes';
 
 type Translations = typeof en;
 
@@ -19,23 +21,36 @@ const translations: Record<string, Translations> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState('en');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [language, setLanguage] = useState<string>('en');
   const [t, setT] = useState<Translations>(translations.en);
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && translations[savedLanguage]) {
-      setLanguage(savedLanguage);
-      setT(translations[savedLanguage]);
-    }
-  }, []);
+    // Detect language from URL
+    const langFromPath = getLanguageFromPath(location.pathname);
+    setLanguage(langFromPath);
+    setT(translations[langFromPath]);
+    localStorage.setItem('language', langFromPath);
+  }, [location.pathname]);
 
-  const changeLanguage = (lang: string) => {
-    if (translations[lang]) {
-      setLanguage(lang);
-      setT(translations[lang]);
-      localStorage.setItem('language', lang);
+  const changeLanguage = (newLang: string) => {
+    if (!translations[newLang]) return;
+    
+    const currentLang = getLanguageFromPath(location.pathname) as Language;
+    const routeName = getRouteNameFromPath(location.pathname, currentLang);
+    
+    if (routeName && routes[newLang as Language]) {
+      const newPath = routes[newLang as Language][routeName];
+      navigate(newPath);
+    } else {
+      // Fallback to home if route not found
+      navigate(routes[newLang as Language].home);
     }
+    
+    setLanguage(newLang);
+    setT(translations[newLang]);
+    localStorage.setItem('language', newLang);
   };
 
   return (

@@ -2,12 +2,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import vageSunset from "@/assets/vage-sunset.webp";
+import { useHreflang } from "@/hooks/useHreflang";
 
 export default function YourStay() {
   const { t } = useLanguage();
+  const hreflangTags = useHreflang();
 
   return (
     <div className="min-h-screen bg-background">
+      {hreflangTags}
       <Navbar />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16">
