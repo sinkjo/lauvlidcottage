@@ -211,7 +211,7 @@ export default function Index() {
                 {t.home.cta.description}
               </p>
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/booking">{t.home.cta.bookNow}</Link>
+                <a href="https://myrent.interhome.com/en/NO1928.603.1/" target="_blank" rel="noopener noreferrer">{t.home.cta.bookNow}</a>
               </Button>
             </div>
           </div>
