@@ -1,7 +1,9 @@
 
 import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { en } from '../locales/en';
 import { de } from '../locales/de';
+import { getAlternateRoute, getLanguageFromPath } from '@/config/routes';
 
 type Translations = typeof en;
 
@@ -19,22 +21,30 @@ const translations: Record<string, Translations> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [language, setLanguage] = useState('en');
   const [t, setT] = useState<Translations>(translations.en);
 
+  // Detect language from URL on mount and when path changes
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && translations[savedLanguage]) {
-      setLanguage(savedLanguage);
-      setT(translations[savedLanguage]);
+    const detectedLang = getLanguageFromPath(location.pathname);
+    if (detectedLang !== language) {
+      setLanguage(detectedLang);
+      setT(translations[detectedLang]);
     }
-  }, []);
+  }, [location.pathname]);
 
   const changeLanguage = (lang: string) => {
     if (translations[lang]) {
       setLanguage(lang);
       setT(translations[lang]);
       localStorage.setItem('language', lang);
+      
+      // Navigate to the corresponding route in the new language
+      const routes = getAlternateRoute(location.pathname);
+      const newPath = lang === 'en' ? routes.en : routes.de;
+      navigate(newPath);
     }
   };
 

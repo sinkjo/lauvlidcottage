@@ -24,6 +24,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ApartmentProps } from "@/components/ApartmentCard";
+import { useHreflang } from "@/hooks/useHreflang";
 
 // Sample apartments data
 const apartmentsData: ApartmentProps[] = [
@@ -63,6 +64,7 @@ const apartmentsData: ApartmentProps[] = [
 ];
 
 export default function BookingPage() {
+  const hreflang = useHreflang();
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(addDays(new Date(), 7));
   const [adults, setAdults] = useState("2");
@@ -152,6 +154,7 @@ export default function BookingPage() {
   
   return (
     <div className="min-h-screen flex flex-col">
+      {hreflang}
       <Navbar />
       
       <main className="flex-1 pt-20">

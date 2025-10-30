@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Wifi, Trees, Waves, Ship, MapPin, Home } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useHreflang } from "@/hooks/useHreflang";
+import { getRoute } from "@/config/routes";
 import cottageInterior from "@/assets/cottage-interior.jpg";
 import cottageExterior from "@/assets/cottage-exterior.jpg";
 import cottageLake from "@/assets/cottage-lake.jpg";
@@ -53,7 +55,9 @@ const featuredApartments: ApartmentProps[] = [
 ];
 
 export default function Index() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const hreflang = useHreflang();
+  const lang = language as 'en' | 'de';
   
   useEffect(() => {
     // Scroll to top when component mounts
@@ -99,6 +103,7 @@ export default function Index() {
       <Helmet>
         <title>Lauvlid Cottage</title>
       </Helmet>
+      {hreflang}
       <Navbar />
       
       <main className="flex-1">
@@ -123,7 +128,7 @@ export default function Index() {
                   {t.home.welcome.description2}
                 </p>
                 <Button asChild className="btn-primary">
-                  <Link to="/gallery">
+                  <Link to={getRoute('gallery', lang)}>
                     {t.home.welcome.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
