@@ -23,20 +23,11 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            {/* English routes */}
             <Route path="/" element={<Index />} />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/your-stay" element={<YourStay />} />
             <Route path="/contact" element={<Contact />} />
-            
-            {/* German routes */}
-            <Route path="/de" element={<Index />} />
-            <Route path="/de/buchung" element={<BookingPage />} />
-            <Route path="/de/galerie" element={<Gallery />} />
-            <Route path="/de/ihr-aufenthalt" element={<YourStay />} />
-            <Route path="/de/kontakt" element={<Contact />} />
-            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

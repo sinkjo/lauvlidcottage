@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useHreflang } from "@/hooks/useHreflang";
 import exteriorBalcony from "@/assets/exterior-balcony.png";
 import exteriorBoat from "@/assets/exterior-boat.jpg";
 import exteriorCabin1 from "@/assets/exterior-cabin-1.webp";
@@ -125,7 +124,6 @@ const galleryImages = [
 
 export default function Gallery() {
   const { t } = useLanguage();
-  const hreflang = useHreflang();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filteredImages, setFilteredImages] = useState(galleryImages);
   const [activeFilter, setActiveFilter] = useState("all");
@@ -182,7 +180,6 @@ export default function Gallery() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      {hreflang}
       <Navbar />
       
       <main className="flex-1 pt-20">

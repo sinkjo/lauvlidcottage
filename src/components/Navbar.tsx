@@ -7,17 +7,15 @@ import { cn } from "@/lib/utils";
 import LanguageSelector from "./LanguageSelector";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getRoute } from "@/config/routes";
 
 export default function Navbar() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const lang = language as 'en' | 'de';
   
   const navLinks = [
-    { name: t.nav.home, path: getRoute('home', lang) },
-    { name: t.nav.gallery, path: getRoute('gallery', lang) },
-    { name: t.nav.yourStay, path: getRoute('yourStay', lang) }
+    { name: t.nav.home, path: "/" },
+    { name: t.nav.gallery, path: "/gallery" },
+    { name: t.nav.yourStay, path: "/your-stay" }
   ];
   
   return <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-card/80 backdrop-blur-lg py-3 shadow-md transition-all duration-300">
