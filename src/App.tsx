@@ -9,6 +9,7 @@ import BookingPage from "./pages/BookingPage";
 import Gallery from "./pages/Gallery";
 import YourStay from "./pages/YourStay";
 import Contact from "./pages/Contact";
+import FerienhausTysnes from "./pages/FerienhausTysnes";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/your-stay" element={<YourStay />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/de/ferienhaus-tysnes" element={<FerienhausTysnes />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
