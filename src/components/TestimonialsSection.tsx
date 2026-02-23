@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -67,33 +67,43 @@ export default function TestimonialsSection() {
   const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchDelta, setTouchDelta] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
   
   const nextTestimonial = () => {
     if (isAnimating) return;
-    
     setIsAnimating(true);
     setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
+    setTimeout(() => setIsAnimating(false), 500);
   };
   
   const prevTestimonial = () => {
     if (isAnimating) return;
-    
     setIsAnimating(true);
     setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
+    setTimeout(() => setIsAnimating(false), 500);
   };
-  
-  useEffect(() => {
-    const interval = setInterval(nextTestimonial, 8000);
-    return () => clearInterval(interval);
-  }, []);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    setTouchStart(e.clientX);
+    setIsDragging(true);
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (touchStart === null) return;
+    setTouchDelta(e.clientX - touchStart);
+  };
+
+  const handlePointerUp = () => {
+    if (touchStart === null) return;
+    if (touchDelta < -50) nextTestimonial();
+    else if (touchDelta > 50) prevTestimonial();
+    setTouchStart(null);
+    setTouchDelta(0);
+    setIsDragging(false);
+  };
   
   return (
     <section className="section bg-muted py-20">
@@ -108,7 +118,13 @@ export default function TestimonialsSection() {
         </div>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="relative h-[400px] md:h-[300px]">
+          <div
+            className="relative h-[400px] md:h-[300px] cursor-grab active:cursor-grabbing select-none touch-pan-y"
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
+          >
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
