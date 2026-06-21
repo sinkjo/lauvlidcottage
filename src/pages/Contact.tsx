@@ -6,7 +6,9 @@ import { MapPin, Phone, Mail, Clock, Send, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Helmet } from "react-helmet";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { HreflangTags } from "@/components/HreflangTags";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -53,6 +55,11 @@ export default function Contact() {
   
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>{t.meta.contact.title}</title>
+        <meta name="description" content={t.meta.contact.description} />
+      </Helmet>
+      <HreflangTags routeKey="contact" />
       <Navbar />
       
       <main className="flex-1 pt-20">

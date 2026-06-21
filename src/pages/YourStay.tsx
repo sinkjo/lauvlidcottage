@@ -1,6 +1,8 @@
+import { Helmet } from "react-helmet";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { HreflangTags } from "@/components/HreflangTags";
 import vageSunset from "@/assets/vage-sunset.webp";
 
 export default function YourStay() {
@@ -8,6 +10,11 @@ export default function YourStay() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{t.meta.yourStay.title}</title>
+        <meta name="description" content={t.meta.yourStay.description} />
+      </Helmet>
+      <HreflangTags routeKey="yourStay" />
       <Navbar />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16">

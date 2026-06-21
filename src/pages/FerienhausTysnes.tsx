@@ -14,7 +14,8 @@ export default function FerienhausTysnes() {
         <meta name="description" content="Entdecken Sie das perfekte Ferienhaus Tysnes bei Lauvlid Cottage. Genießen Sie authentische norwegische Atmosphäre, atemberaubende Fjordblicke und absolute Ruhe in der Natur." />
         <link rel="canonical" href="https://www.lauvlidcottage.com/de/ferienhaus-tysnes" />
         <link rel="alternate" hrefLang="de" href="https://www.lauvlidcottage.com/de/ferienhaus-tysnes" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.lauvlidcottage.com/" />
+        <link rel="alternate" hrefLang="en" href="https://www.lauvlidcottage.com/cottage-norway" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.lauvlidcottage.com/cottage-norway" />
       </Helmet>
       
       <Navbar />

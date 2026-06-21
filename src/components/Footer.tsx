@@ -2,11 +2,13 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ROUTES } from "@/routes";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const lang = language as "en" | "de";
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
       <div className="container">
@@ -31,18 +33,18 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div className="animate-fade-in [animation-delay:200ms]">
             <h4 className="text-xl font-bold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
               {[
-                { name: t.nav.home, path: "/" },
-                { name: t.nav.gallery, path: "/gallery" },
-                { name: t.nav.yourStay, path: "/your-stay" },
+                { name: t.nav.home, path: ROUTES.home[lang] },
+                { name: t.nav.gallery, path: ROUTES.gallery[lang] },
+                { name: t.nav.yourStay, path: ROUTES.yourStay[lang] },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
@@ -50,8 +52,8 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link 
-                  to="/de/ferienhaus-tysnes" 
+                <Link
+                  to="/de/ferienhaus-tysnes"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Ferienhaus Tysnes
@@ -59,7 +61,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div className="animate-fade-in [animation-delay:300ms]">
             <h4 className="text-xl font-bold mb-4">{t.footer.contact}</h4>
             <ul className="space-y-3">
@@ -80,7 +82,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-border pt-8 mt-8 text-center text-muted-foreground">
           <p>&copy; {currentYear} Lauvlid Cottage. {t.footer.allRights}</p>
         </div>

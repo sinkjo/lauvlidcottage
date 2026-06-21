@@ -1,7 +1,9 @@
 
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { HreflangTags } from "@/components/HreflangTags";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -180,6 +182,11 @@ export default function Gallery() {
   
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>{t.meta.gallery.title}</title>
+        <meta name="description" content={t.meta.gallery.description} />
+      </Helmet>
+      <HreflangTags routeKey="gallery" />
       <Navbar />
       
       <main className="flex-1 pt-20">

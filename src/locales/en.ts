@@ -1,4 +1,26 @@
 export const en = {
+  meta: {
+    home: {
+      title: "Lauvlid Cottage – Seaside Retreat in Norway",
+      description: "Experience authentic Norwegian charm at our cozy fjordside cottage on Tysnes. Stunning sea views, private dock, and boat included."
+    },
+    gallery: {
+      title: "Photo Gallery – Lauvlid Cottage",
+      description: "Explore Lauvlid Cottage through our photo gallery. Interior and exterior shots of this stunning Norwegian seaside retreat on Tysnes."
+    },
+    yourStay: {
+      title: "Your Stay at Lauvlid Cottage, Tysnes",
+      description: "Located in Våge, Tysnes – close to Bergen and nature trails. Find out what makes this Norwegian fjordside cottage the perfect escape."
+    },
+    contact: {
+      title: "Contact Us – Lauvlid Cottage",
+      description: "Get in touch with Lauvlid Cottage. We're happy to answer your questions and help you plan the perfect stay on the island of Tysnes."
+    },
+    booking: {
+      title: "Book Your Stay – Lauvlid Cottage",
+      description: "Reserve your dates at Lauvlid Cottage on Tysnes. Easy online booking with instant confirmation for your Norwegian fjord holiday."
+    }
+  },
   nav: {
     home: "Home",
     gallery: "Gallery",

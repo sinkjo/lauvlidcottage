@@ -22,17 +22,12 @@ const languages: Language[] = [
 ];
 
 export default function LanguageSelector() {
-  const { language, setLanguage } = useLanguage();
+  const { language, switchLanguage } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
-  // This effect is to ensure hydration doesn't cause issues
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const handleLanguageChange = (value: string) => {
-    setLanguage(value);
-  };
 
   if (!mounted) {
     return null;
@@ -40,9 +35,9 @@ export default function LanguageSelector() {
 
   return (
     <div className="flex items-center">
-      <Select value={language} onValueChange={handleLanguageChange}>
-        <SelectTrigger 
-          className="w-[80px] h-10 border-none bg-transparent focus:ring-0" 
+      <Select value={language} onValueChange={(value) => switchLanguage(value as "en" | "de")}>
+        <SelectTrigger
+          className="w-[80px] h-10 border-none bg-transparent focus:ring-0"
           aria-label="Select Language"
         >
           <div className="flex items-center space-x-2">
@@ -52,9 +47,9 @@ export default function LanguageSelector() {
         </SelectTrigger>
         <SelectContent align="start" className="w-[160px]">
           {languages.map((lang) => (
-            <SelectItem 
-              key={lang.code} 
-              value={lang.code} 
+            <SelectItem
+              key={lang.code}
+              value={lang.code}
               className="cursor-pointer"
             >
               <div className="flex items-center space-x-2">

@@ -24,6 +24,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ApartmentProps } from "@/components/ApartmentCard";
+import { Helmet } from "react-helmet";
+import { HreflangTags } from "@/components/HreflangTags";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Sample apartments data
 const apartmentsData: ApartmentProps[] = [
@@ -63,6 +67,8 @@ const apartmentsData: ApartmentProps[] = [
 ];
 
 export default function BookingPage() {
+  const localizedPath = useLocalizedPath();
+  const { t } = useLanguage();
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(addDays(new Date(), 7));
   const [adults, setAdults] = useState("2");
@@ -152,6 +158,11 @@ export default function BookingPage() {
   
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>{t.meta.booking.title}</title>
+        <meta name="description" content={t.meta.booking.description} />
+      </Helmet>
+      <HreflangTags routeKey="booking" />
       <Navbar />
       
       <main className="flex-1 pt-20">
@@ -837,7 +848,7 @@ export default function BookingPage() {
                       Booking Reference: <span className="text-primary">MRS-{Math.floor(Math.random() * 10000).toString().padStart(4, '0')}</span>
                     </p>
                     <Button asChild className="btn-primary">
-                      <Link to="/">Return to Homepage</Link>
+                      <Link to={localizedPath("home")}>Return to Homepage</Link>
                     </Button>
                   </div>
                 )}

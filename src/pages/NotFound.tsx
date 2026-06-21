@@ -4,9 +4,11 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 
 const NotFound = () => {
   const { t } = useLanguage();
+  const localizedPath = useLocalizedPath();
   const location = useLocation();
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const NotFound = () => {
           {t.notFound.description}
         </p>
         <Button asChild className="btn-primary">
-          <Link to="/">
+          <Link to={localizedPath("home")}>
             <Home className="mr-2 h-5 w-5" />
             {t.notFound.returnHome}
           </Link>

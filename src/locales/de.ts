@@ -1,4 +1,26 @@
 export const de = {
+  meta: {
+    home: {
+      title: "Lauvlid Cottage – Ferienhaus am Fjord in Norwegen",
+      description: "Erleben Sie norwegischen Charme in unserem Ferienhaus auf Tysnes. Privater Steg, Boot inklusive und atemberaubender Fjordblick."
+    },
+    gallery: {
+      title: "Fotogalerie – Lauvlid Cottage",
+      description: "Erkunden Sie das Lauvlid Cottage in Bildern. Innen- und Außenaufnahmen unseres wunderschönen Ferienhauses am Fjord auf Tysnes."
+    },
+    yourStay: {
+      title: "Ihr Aufenthalt – Lauvlid Cottage Tysnes",
+      description: "Unser Ferienhaus liegt in Våge, Tysnes – nah an Bergen und Wanderwegen. Alles über Aktivitäten und Erlebnisse rund ums Ferienhaus."
+    },
+    contact: {
+      title: "Kontakt – Lauvlid Cottage",
+      description: "Kontaktieren Sie Lauvlid Cottage bei Fragen zu Ihrem Aufenthalt. Wir helfen Ihnen gerne, Ihren Traumurlaub in Norwegen zu planen."
+    },
+    booking: {
+      title: "Jetzt buchen – Lauvlid Cottage Tysnes",
+      description: "Reservieren Sie jetzt Ihren Aufenthalt im Lauvlid Cottage auf Tysnes. Einfache Buchung mit Sofortbestätigung für Ihren Fjordurlaub."
+    }
+  },
   nav: {
     home: "Startseite",
     gallery: "Galerie",

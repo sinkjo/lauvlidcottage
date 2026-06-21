@@ -1,45 +1,40 @@
-
-import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { en } from '../locales/en';
 import { de } from '../locales/de';
+import { getLanguageFromPath, getRouteKeyFromPath, ROUTES } from '../routes';
 
+type Lang = 'en' | 'de';
 type Translations = typeof en;
 
 interface LanguageContextType {
-  language: string;
-  setLanguage: (lang: string) => void;
+  language: Lang;
+  switchLanguage: (lang: Lang) => void;
   t: Translations;
 }
 
-const translations: Record<string, Translations> = {
-  en,
-  de
-};
+const translations: Record<Lang, Translations> = { en, de };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState('en');
-  const [t, setT] = useState<Translations>(translations.en);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && translations[savedLanguage]) {
-      setLanguage(savedLanguage);
-      setT(translations[savedLanguage]);
-    }
-  }, []);
+  const language = getLanguageFromPath(location.pathname);
+  const t = translations[language];
 
-  const changeLanguage = (lang: string) => {
-    if (translations[lang]) {
-      setLanguage(lang);
-      setT(translations[lang]);
-      localStorage.setItem('language', lang);
+  const switchLanguage = (lang: Lang) => {
+    const routeKey = getRouteKeyFromPath(location.pathname);
+    if (routeKey) {
+      navigate(ROUTES[routeKey][lang]);
+    } else {
+      navigate(lang === 'de' ? '/de' : '/');
     }
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: changeLanguage, t }}>
+    <LanguageContext.Provider value={{ language, switchLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -47,8 +42,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
+  if (!context) throw new Error('useLanguage must be used within a LanguageProvider');
   return context;
 };

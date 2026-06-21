@@ -6,10 +6,12 @@ import HeroSection from "@/components/HeroSection";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
+import { HreflangTags } from "@/components/HreflangTags";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Wifi, Trees, Waves, Ship, MapPin, Home } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import cottageInterior from "@/assets/cottage-interior.jpg";
 import cottageExterior from "@/assets/cottage-exterior.jpg";
 import cottageLake from "@/assets/cottage-lake.jpg";
@@ -54,6 +56,7 @@ const featuredApartments: ApartmentProps[] = [
 
 export default function Index() {
   const { t } = useLanguage();
+  const localizedPath = useLocalizedPath();
   
   useEffect(() => {
     // Scroll to top when component mounts
@@ -97,8 +100,10 @@ export default function Index() {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Helmet>
-        <title>Lauvlid Cottage</title>
+        <title>{t.meta.home.title}</title>
+        <meta name="description" content={t.meta.home.description} />
       </Helmet>
+      <HreflangTags routeKey="home" />
       <Navbar />
       
       <main className="flex-1">
@@ -123,7 +128,7 @@ export default function Index() {
                   {t.home.welcome.description2}
                 </p>
                 <Button asChild className="btn-primary">
-                  <Link to="/gallery">
+                  <Link to={localizedPath("gallery")}>
                     {t.home.welcome.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
