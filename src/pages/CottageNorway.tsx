@@ -10,7 +10,7 @@ export default function CottageNorway() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Cottage Norway – Lauvlid Cottage | Your Retreat on Tysnes</title>
+        <title>Cottage Norway – Lauvlid Cottage</title>
         <meta name="description" content="Discover the perfect cottage in Norway at Lauvlid Cottage on Tysnes. Breathtaking fjord views, private dock, and authentic Norwegian charm await you." />
         <link rel="canonical" href="https://www.lauvlidcottage.com/cottage-norway" />
         <link rel="alternate" hrefLang="en" href="https://www.lauvlidcottage.com/cottage-norway" />

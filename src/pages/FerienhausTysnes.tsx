@@ -10,7 +10,7 @@ export default function FerienhausTysnes() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Ferienhaus Tysnes - Lauvlid Cottage | Ihr Traumurlaub in Norwegen</title>
+        <title>Ferienhaus Tysnes, Norwegen - Lauvlid Cottage</title>
         <meta name="description" content="Entdecken Sie das perfekte Ferienhaus Tysnes bei Lauvlid Cottage. Genießen Sie authentische norwegische Atmosphäre, atemberaubende Fjordblicke und absolute Ruhe in der Natur." />
         <link rel="canonical" href="https://www.lauvlidcottage.com/de/ferienhaus-tysnes" />
         <link rel="alternate" hrefLang="de" href="https://www.lauvlidcottage.com/de/ferienhaus-tysnes" />
