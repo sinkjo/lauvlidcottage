@@ -32,6 +32,26 @@ jobs:
 
       - run: npm run build
 
+      - name: Create static index.html for each route
+        run: |
+          routes=(
+            gallery
+            your-stay
+            contact
+            booking
+            cottage-norway
+            de
+            de/galerie
+            de/ihr-aufenthalt
+            de/kontakt
+            de/buchen
+            de/ferienhaus-tysnes
+          )
+          for route in "${routes[@]}"; do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
